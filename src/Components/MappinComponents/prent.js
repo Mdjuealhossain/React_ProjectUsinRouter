@@ -1,0 +1,38 @@
+export const Product=[
+    {
+        name:"Jueal",
+        roll:920977,
+        dept:"EEE",
+        address:"Barial",
+        id:1
+    },
+    {
+        name:"Jueal",
+        roll:920977,
+        dept:"EEE",
+        address:"Barial",
+        id:2
+    },
+    {
+        name:"Masum",
+        roll:92177,
+        dept:"EEE",
+        address:"Dhaka",
+        id:3
+    },
+    {
+        name:"Bann",
+        roll:43546,
+        dept:"CSE",
+        address:"Khulna",
+        id:4
+    },
+    {
+        name:"Masud",
+        roll:232543,
+        dept:"ENT",
+        address:"Barial",
+        id:5
+    }
+
+]
