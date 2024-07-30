@@ -1,22 +1,40 @@
+import React, { useState } from "react";
 
+import { v4 as uuidv4 } from "uuid";
+import NewTodo from "./component/NewTodo";
+import Todos from "./component/Todos";
 
-import './App.css';
-import FormFld from './Components/HooksComponents/ForwRefCom2/FormFild';
-import FordRef from './Components/HooksComponents/ForwordRefCom/ForwdRef';
+const todosData = [
+  {
+    id: uuidv4(),
+    title: "read react documentation",
+    desc: "react documentation might be boring but I can do it",
+  },
+  {
+    id: uuidv4(),
+    title: "do react assignment",
+    desc: "react assignments might be boring but I can do it",
+  },
+];
 
-import Time from './Components/HooksComponents/TimeComponent/Time';
-import RefVideo from './forRefVdoComponents/FordRefVdo';
+const App = () => {
+  const [todos, setTodos] = useState(todosData);
 
+  // get the newTodo from NewTodo.js here inside this function
+  const handleAddTodo = (todo) => {
+    setTodos((prevTodos) => {
+      return [...prevTodos, todo];
+    });
+  };
 
-function App() {
+  console.log(todos);
 
   return (
-    <div className="App">
-   
-
-   <RefVideo />
+    <div>
+      <NewTodo onHandleAddTodo={handleAddTodo} />
+      <Todos todos={todos} />
     </div>
   );
-}
+};
 
 export default App;
